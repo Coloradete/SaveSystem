@@ -38,7 +38,8 @@ public class SavingSystemManager : MonoBehaviour
     public void LoadHeroData(int heroID)
     {
         HeroData heroData = MainSystem.LoadHeroByID(heroID);
-
+        
+        Debug.Log("This data should update the hero parameters, by now just showing it");
         if (heroData != null)
         {
             Debug.Log("Loaded hero with ID " + heroID + 
