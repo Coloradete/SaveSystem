@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HeroStatus : MonoBehaviour
 {
-    [SerializeField] private int playerID;
+    private static int spawnedPlayer;
+    
+    private int playerID;
     public int PlayerID => playerID;
 
     [SerializeField] private int currentRegularHealthPoints;
@@ -14,4 +17,10 @@ public class HeroStatus : MonoBehaviour
 
     [SerializeField] private bool isDead;
     public bool IsDead => isDead;
+
+    private void Awake()
+    {
+        spawnedPlayer++;
+        playerID = spawnedPlayer;
+    }
 }
