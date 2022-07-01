@@ -12,11 +12,11 @@ namespace SpecialAbilities
 
         private bool isInvulnerable;
 
-        private SpriteRenderer sprite;
+        // private SpriteRenderer sprite;
 
         private void Awake()
         {
-            sprite = GetComponent<SpriteRenderer>();
+            // sprite = GetComponent<SpriteRenderer>();
         }
         internal override void ApplyDuplicateEffects()
         {
@@ -42,7 +42,7 @@ namespace SpecialAbilities
 
         private IEnumerator ActivateInvulnerability()
         {
-            sprite.enabled = true;
+            // sprite.enabled = true;
 
             isInvulnerable = true;
 
@@ -59,7 +59,7 @@ namespace SpecialAbilities
 
             // transform.parent.gameObject.layer = Layers.HERO;
 
-            sprite.enabled = false;
+            // sprite.enabled = false;
 
             isInvulnerable = false;
         }
