@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using static HeroAbilities.AbilitiesHolder;
 
@@ -8,11 +9,9 @@ namespace HeroAbilities
     {
         [SerializeField] private AbilityTypes abilityType;
         public AbilityTypes AbilityType => abilityType;
+        public int AbilityLevel { get; private set; }
 
-        private int abilityLevel;
-
-        public int AbilityLevel => abilityLevel;
-        
+        [SerializeField] protected TMP_Text abilityLevelText;
         public void CheckForDuplicates()
         {
             Type type = GetType();
@@ -28,7 +27,8 @@ namespace HeroAbilities
                     {
                         HeroSpecialAbility heroSpecialAbility = (HeroSpecialAbility)components[i];
                         heroSpecialAbility.ApplyDuplicateEffects();
-                        heroSpecialAbility.abilityLevel++;
+                        heroSpecialAbility.AbilityLevel++;
+                        heroSpecialAbility.abilityLevelText.text = heroSpecialAbility.AbilityLevel.ToString();
                     }
                 }
 
@@ -36,7 +36,7 @@ namespace HeroAbilities
             }
             else
             {
-                abilityLevel++;
+                AbilityLevel++;
                 InitializeAbility();
                 transform.localPosition = Vector3.zero;
             }

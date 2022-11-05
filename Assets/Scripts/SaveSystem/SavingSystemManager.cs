@@ -51,8 +51,8 @@ namespace SaveSystem
                 {
                     for (int k = 0; k < heroData.AbilitiesHold[i]; k++)
                     {
-                        GameObject ability = Instantiate(AbilitiesHolder.Abilities[i] ,heroesByID[heroID].transform);
-                        Debug.Log("Hero had ability: " + ability);
+                        GameObject ability = Instantiate(AbilitiesHolder.Abilities[i], heroesByID[heroID].transform);
+                        Debug.Log("Hero had ability: " + ability, ability.gameObject);
                         ability.GetComponent<HeroSpecialAbility>().CheckForDuplicates();
                     }
                 }

@@ -46,10 +46,8 @@ namespace SpecialAbilities
 
         public void TestGetObject(HeroStatus heroStatus)
         {
-            GameObject testAbilityGameObject = Instantiate(abilityGameObject, null);
-
-            testAbilityGameObject.transform.SetParent(heroStatus.transform);
-            
+            GameObject testAbilityGameObject = Instantiate(abilityGameObject, heroStatus.transform);
+            testAbilityGameObject.SetActive(true);
             testAbilityGameObject.GetComponent<HeroSpecialAbility>().CheckForDuplicates();
         }
 

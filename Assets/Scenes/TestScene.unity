@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 16772838}
   - component: {fileID: 16772839}
+  - component: {fileID: 16772840}
   m_Layer: 5
   m_Name: HeroTwo
   m_TagString: Untagged
@@ -177,6 +178,30 @@ MonoBehaviour:
   currentRegularHealthPoints: 7
   currentShieldPoints: 6
   isDead: 0
+--- !u!114 &16772840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16772837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 66, y: 100}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 1
+  m_ConstraintCount: 5
 --- !u!1 &89841879
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,7 +393,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1339595145}
+      - m_Target: {fileID: 4908741754505112843}
         m_TargetAssemblyTypeName: SpecialAbilities.HeroSpecialAbilityItem, Assembly-CSharp
         m_MethodName: TestGetObject
         m_Mode: 2
@@ -1125,17 +1150,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2c0f662804e1ca4987ee206995240cb, type: 3}
---- !u!114 &435006045 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7972148653472122461, guid: f2c0f662804e1ca4987ee206995240cb, type: 3}
-  m_PrefabInstance: {fileID: 435006044}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7771c772b2ba36f458f07370b14c341d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &458107239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,7 +2044,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1057608408}
+      - m_Target: {fileID: 7972148654194119818}
         m_TargetAssemblyTypeName: SpecialAbilities.HeroSpecialAbilityItem, Assembly-CSharp
         m_MethodName: TestGetObject
         m_Mode: 2
@@ -2249,7 +2263,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 435006045}
+      - m_Target: {fileID: 7972148653613460481}
         m_TargetAssemblyTypeName: SpecialAbilities.HeroSpecialAbilityItem, Assembly-CSharp
         m_MethodName: TestGetObject
         m_Mode: 2
@@ -2356,17 +2370,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20896afa9271539468a06f0857656773, type: 3}
---- !u!114 &1057608408 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7972148653472122461, guid: 20896afa9271539468a06f0857656773, type: 3}
-  m_PrefabInstance: {fileID: 1057608407}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7771c772b2ba36f458f07370b14c341d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1057647240
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,7 +2975,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1057608408}
+      - m_Target: {fileID: 7972148654194119818}
         m_TargetAssemblyTypeName: SpecialAbilities.HeroSpecialAbilityItem, Assembly-CSharp
         m_MethodName: TestGetObject
         m_Mode: 2
@@ -3290,17 +3293,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f57bddee52854864c99acb42d15636c0, type: 3}
---- !u!114 &1339595145 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4908741755467150467, guid: f57bddee52854864c99acb42d15636c0, type: 3}
-  m_PrefabInstance: {fileID: 1339595144}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7771c772b2ba36f458f07370b14c341d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1339932475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3462,7 +3454,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 435006045}
+      - m_Target: {fileID: 7972148653613460481}
         m_TargetAssemblyTypeName: SpecialAbilities.HeroSpecialAbilityItem, Assembly-CSharp
         m_MethodName: TestGetObject
         m_Mode: 2
@@ -3732,7 +3724,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1339595145}
+      - m_Target: {fileID: 4908741754505112843}
         m_TargetAssemblyTypeName: SpecialAbilities.HeroSpecialAbilityItem, Assembly-CSharp
         m_MethodName: TestGetObject
         m_Mode: 2
@@ -3859,10 +3851,10 @@ RectTransform:
   m_Father: {fileID: 16772838}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 66, y: 90}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905333612
 MonoBehaviour:
@@ -4406,6 +4398,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5738985061526059842}
   m_CullTransparentMesh: 1
+--- !u!114 &4908741754505112843 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4908741755467150467, guid: f57bddee52854864c99acb42d15636c0, type: 3}
+  m_PrefabInstance: {fileID: 1339595144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7771c772b2ba36f458f07370b14c341d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &5312443296879485610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4475,6 +4478,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7972148653613460481 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7972148653472122461, guid: f2c0f662804e1ca4987ee206995240cb, type: 3}
+  m_PrefabInstance: {fileID: 435006044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7771c772b2ba36f458f07370b14c341d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7972148654194119818 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7972148653472122461, guid: 20896afa9271539468a06f0857656773, type: 3}
+  m_PrefabInstance: {fileID: 1057608407}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7771c772b2ba36f458f07370b14c341d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8259533113516626066
 GameObject:
   m_ObjectHideFlags: 0
@@ -4485,6 +4510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5574466968466097110}
   - component: {fileID: 242839057869332989}
+  - component: {fileID: 8259533113516626067}
   m_Layer: 5
   m_Name: HeroOne
   m_TagString: Untagged
@@ -4492,6 +4518,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &8259533113516626067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8259533113516626066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 66, y: 100}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 1
+  m_ConstraintCount: 5
 --- !u!224 &8724926140508221981
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4507,8 +4557,8 @@ RectTransform:
   m_Father: {fileID: 5574466968466097110}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 66, y: 90}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
