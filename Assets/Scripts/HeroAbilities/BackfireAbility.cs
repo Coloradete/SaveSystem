@@ -1,7 +1,6 @@
-using HeroAbilities;
 using UnityEngine;
 
-namespace SpecialAbilities
+namespace HeroAbilities
 {
     public class BackfireAbility : HeroSpecialAbility
     {
@@ -10,51 +9,14 @@ namespace SpecialAbilities
         /// </summary>
         [SerializeField] private float backFireVelocity;
 
-        // private ObjectsPool shotsPool;
-
-        private void Awake()
+        protected override void InitializeAbility()
         {
-            // shotsPool = GetComponent<ObjectsPool>();
-        }
-
-        private void Start()
-        {
-            // shotsPool.SetParentToNull();
-        }
-
-        internal override void InitializeAbility()
-        {
-            // heroSlash = GetComponentInParent<HeroSlash>();
-            // heroSlash.IsSlashing.OnChanged += OnSlashingChanged;
             transform.localPosition = Vector3.zero;
         }
 
-        private void OnDisable()
+        protected override void ApplyDuplicateEffects()
         {
-            // if (heroSlash)
-            // {
-            //     heroSlash.IsSlashing.OnChanged -= OnSlashingChanged;
-            // }
-        }
-        // private void OnSlashingChanged(Observable<bool> arg1, bool oldValue, bool value)
-        // {
-        //     if (value)
-        //     {
-        //         Backfire(heroSlash.SlashDirection);
-        //     }
-        // }
-        internal override void ApplyDuplicateEffects()
-        {
-            Debug.Log("HERE THE BACKFIRE SHOT SHOULD GET BETTER");
-        }
-
-        private void Backfire(Vector2 slashDirection)
-        {
-            // GameObject shot = shotsPool.GetNextPoolObject();
-            //
-            // shot.transform.position = transform.position;
-            //
-            // shot.GetComponent<Rigidbody2D>().velocity = -slashDirection.normalized * backFireVelocity;
+            Debug.Log("Backfire upgraded");
         }
     }
 }

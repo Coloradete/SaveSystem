@@ -1,8 +1,7 @@
 using System.Collections;
-using HeroAbilities;
 using UnityEngine;
 
-namespace SpecialAbilities
+namespace HeroAbilities
 {
     public class MagicShellAbility : HeroSpecialAbility
     {
@@ -10,27 +9,21 @@ namespace SpecialAbilities
 
         private float remainingInvulnerabilityTime, currentCooldownTime;
 
-        private bool isInvulnerable;
-
-        // private SpriteRenderer sprite;
-
-        private void Awake()
+        public bool IsInvulnerable { get; private set; }
+        
+        protected override void ApplyDuplicateEffects()
         {
-            // sprite = GetComponent<SpriteRenderer>();
-        }
-        internal override void ApplyDuplicateEffects()
-        {
-            Debug.Log("THE HolyCrusade should GET BETTER HERE");
+            Debug.Log("MagicShell upgraded");
         }
 
-        internal override void InitializeAbility()
+        protected override void InitializeAbility()
         {
             currentCooldownTime = cooldownTime;
         }
 
         private void Update()
         {
-            if (!isInvulnerable)
+            if (!IsInvulnerable)
             {
                 currentCooldownTime -= Time.deltaTime;
                 if (currentCooldownTime <= 0f)
@@ -42,9 +35,7 @@ namespace SpecialAbilities
 
         private IEnumerator ActivateInvulnerability()
         {
-            // sprite.enabled = true;
-
-            isInvulnerable = true;
+            IsInvulnerable = true;
 
             currentCooldownTime = cooldownTime;
 
@@ -52,16 +43,11 @@ namespace SpecialAbilities
 
             while(remainingInvulnerabilityTime > 0f)
             {
-                // transform.parent.gameObject.layer = Layers.INMUNE_HERO;
                 remainingInvulnerabilityTime -= Time.deltaTime;
                 yield return null;
             }
 
-            // transform.parent.gameObject.layer = Layers.HERO;
-
-            // sprite.enabled = false;
-
-            isInvulnerable = false;
+            IsInvulnerable = false;
         }
     }
 

@@ -10,9 +10,6 @@ namespace SaveSystem
         //Status section
         private int heroCurrentRegularHealthPoints;
         private int heroCurrentShieldPoints;
-
-        private int heroCurrentKeys;
-
         private bool heroIsDead;
 
         //Objects section
@@ -20,7 +17,6 @@ namespace SaveSystem
 
         public int HeroCurrentRegularHealthPoints => heroCurrentRegularHealthPoints;
         public int HeroCurrentShieldPoints => heroCurrentShieldPoints;
-        public int HeroCurrentKeys => heroCurrentKeys;
         public bool HeroIsDead => heroIsDead;
 
         public int[] AbilitiesHold => abilitiesHold;

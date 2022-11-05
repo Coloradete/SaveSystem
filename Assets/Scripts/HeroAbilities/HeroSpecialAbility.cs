@@ -42,15 +42,7 @@ namespace HeroAbilities
             }
         }
 
-        internal abstract void InitializeAbility();
-        internal abstract void ApplyDuplicateEffects();
-
-        private void OnDestroy()
-        {
-            // if (TryGetComponent(out ObjectsPool objectsPool))
-            // {
-            //     objectsPool.DestroyPoolObjects();
-            // }
-        }
+        protected abstract void InitializeAbility();
+        protected abstract void ApplyDuplicateEffects();
     }
 }

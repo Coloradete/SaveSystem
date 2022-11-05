@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HeroStatus : MonoBehaviour
 {
-    [Header("Modifying this value could result in the system not working, \n in the future this should get auto assigned")]
+    [Header("Modifying the ID value could result in the system not working, " +
+            "\n this should get auto assigned by a manager of your choice" +
+            "\n probably related to the controller or player account")]
     [SerializeField] private int playerID;
     public int PlayerID => playerID;
 

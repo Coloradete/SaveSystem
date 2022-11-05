@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System;
 using HeroAbilities;
 using UnityEngine;
 
@@ -6,13 +6,12 @@ namespace SpecialAbilities
 {
     public class HeroSpecialAbilityItem : MonoBehaviour
     {
-        [Header("followed by the word Object")]
-        [Header("The name of the GameObject has to match the AbilityType field")]
+        [Header("The name of the GameObject has to match the AbilityType field" +
+                "/n followed by the word Object")]
         [SerializeField] private GameObject abilityGameObject;
 
-        // public Type AbilityType { get; private set; }
+        public Type AbilityType { get; private set; }
 
-        private List<GameObject> otherAbilitiesChoices;
         public delegate void AbilityGathered(AbilitiesHolder.AbilityTypes abilityType);
         public static event AbilityGathered AbilityGatheredRelease;
 
@@ -21,18 +20,15 @@ namespace SpecialAbilities
         private void Awake()
         {
             abilityGameObject = Instantiate(abilityGameObject, null);
-
             abilityGameObject.SetActive(false);
 
-            // AbilityType = abilityGameObject.GetComponent<HeroSpecialAbility>().GetType();
-
-            otherAbilitiesChoices = new List<GameObject>();
+            AbilityType = abilityGameObject.GetComponent<HeroSpecialAbility>().GetType();
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.TryGetComponent(out HeroStatus heroStatus))
             {
-                if (heroStatus.PlayerID == assignedPlayerID)
+                if (heroStatus.PlayerID == assignedPlayerID) //The player assigned to gather this ability
                 {
                     AbilityGatheredRelease?.Invoke(abilityGameObject.GetComponent<HeroSpecialAbility>().AbilityType);
 
@@ -41,11 +37,6 @@ namespace SpecialAbilities
                     abilityGameObject.SetActive(true);
 
                     abilityGameObject.GetComponent<HeroSpecialAbility>().CheckForDuplicates();
-
-                    foreach (GameObject item in otherAbilitiesChoices)
-                    {
-                        item.SetActive(false);
-                    }
 
                     gameObject.SetActive(false);
                     
@@ -60,11 +51,6 @@ namespace SpecialAbilities
             testAbilityGameObject.transform.SetParent(heroStatus.transform);
             
             testAbilityGameObject.GetComponent<HeroSpecialAbility>().CheckForDuplicates();
-        }
-        
-        public void AddOtherAbilityChoice(GameObject item)
-        {
-            otherAbilitiesChoices.Add(item);
         }
 
         public void AssignPlayerID(int id)
